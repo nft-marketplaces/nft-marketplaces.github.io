@@ -1,0 +1,58 @@
+# NFT Marketplaces
+> An independent, non-custodial dashboard for understanding and comparing marketplaces where non-fungible tokens are discovered, minted, bought, and sold.
+
+## What is NFT Marketplaces
+NFT marketplaces are applications that index NFTs and connect buyers, sellers, and creators through listings, offers, auctions, and primary drops. Wallet-based marketplaces commonly use smart contracts to settle trades while users retain control of their assets until execution. They solve NFT discovery and liquidity problems by organizing collections, metadata, ownership, prices, and order books. Unlike this read-only dashboard, a marketplace executes trades; unlike a centralized exchange, a non-custodial marketplace does not normally hold users’ assets or private keys.
+
+## How it works
+1. A user selects a marketplace and verifies its domain, supported network, collection contract, fees, and liquidity.
+2. The seller connects a self-custodial wallet, authorizes the relevant NFT contract or marketplace protocol, and creates a listing—often as a signed off-chain order.
+3. A buyer signs or submits a purchase transaction; the settlement contract validates the order, ownership, approvals, price, and deadline before transferring payment and the NFT.
+4. The blockchain records settlement, and marketplace indexers update ownership and activity after detecting the transaction. This dashboard only presents information and never requests signatures or participates in settlement.
+
+## Key facts
+- Marketplace types include open, curated, primary-sale, secondary-sale, gaming-specific, art-specific, and aggregation platforms.
+- Ethereum NFTs commonly implement ERC-721 or the multi-token ERC-1155 standard.
+- Common EVM network identifiers include Ethereum mainnet chain ID 1, Polygon PoS 137, and Base 8453.
+- Payment may use a chain’s native currency, wrapped tokens, stablecoins, or marketplace-supported alternatives; there is no universal NFT marketplace token.
+- On-chain ownership and transfer history do not by themselves prove creator identity, copyright, authenticity, or rights to linked media.
+- NFTs frequently reference JSON metadata and media stored outside the token contract, including HTTP servers or IPFS.
+- Listing approval may permit a marketplace contract to transfer an NFT, so users should review and revoke unnecessary approvals.
+- EIP-2981 communicates royalty information, but royalty payment depends on marketplace and contract enforcement.
+- Settlement timing depends on network confirmation and indexing; an off-chain listing can appear quickly, while a completed trade requires an on-chain transaction.
+
+## Common questions
+- **Are NFT marketplaces safe?** Safety varies by domain, contracts, wallet prompts, and collection authenticity. Verify the contract address and never disclose a seed phrase or private key.
+- **Who holds my NFT?** On a non-custodial marketplace, the connected wallet controls it until a valid sale or transfer executes.
+- **What fees apply?** Costs can include marketplace fees, creator royalties, network gas, currency conversion, and minting fees; inspect the transaction before signing.
+- **How long does a trade take?** Execution usually follows the destination chain’s confirmation time, followed by marketplace indexing.
+- **Which assets and chains are supported?** Coverage differs by marketplace and may include Ethereum-compatible NFTs, Solana NFTs, or Bitcoin inscriptions.
+- **How do I start?** Create and secure a compatible wallet, fund it on the correct network, verify the official marketplace URL, and begin with a small transaction.
+- **What are the main risks?** Phishing, malicious approvals, counterfeit collections, smart-contract defects, wash trading, illiquidity, mutable metadata, and unclear intellectual-property rights.
+
+## App
+- Dashboard: https://nft-marketplaces.github.io/
+- App: https://nft-marketplaces.github.io/dashboard/
+
+## Official resources
+OpenSea Marketplace: https://opensea.io/
+OpenSea Help Center: https://support.opensea.io/
+OpenSea Developer Documentation: https://docs.opensea.io/
+Seaport Source Code: https://github.com/ProjectOpenSea/seaport
+Blur Marketplace: https://blur.io/
+Blur Foundation Documentation: https://docs.blur.foundation/
+Rarible Marketplace: https://rarible.com/
+Rarible Protocol Documentation: https://docs.rarible.org/
+Magic Eden Marketplace: https://magiceden.io/
+Magic Eden Help Center: https://help.magiceden.io/
+
+## Data & references
+DefiLlama NFT Marketplace Rankings: https://defillama.com/nfts/marketplaces
+CoinGecko NFT Market Data: https://www.coingecko.com/en/nft
+Solscan NFT Dashboard: https://solscan.io/nfts
+ERC-721 Standard: https://eips.ethereum.org/EIPS/eip-721
+ERC-1155 Standard: https://eips.ethereum.org/EIPS/eip-1155
+ERC-2981 Royalty Standard: https://eips.ethereum.org/EIPS/eip-2981
+IPFS NFT Data Guidance: https://docs.ipfs.tech/how-to/best-practices-for-nft-data/
+NIST NFT Security Report: https://www.nist.gov/publications/non-fungible-token-security
+Wikipedia — Non-fungible token: https://en.wikipedia.org/wiki/Non-fungible_token
