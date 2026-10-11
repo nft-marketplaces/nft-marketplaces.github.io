@@ -1,1410 +1,279 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NFT Marketplaces — How They Work, Fees & How to Pick One</title>
-<meta name="description" content="A practical guide to NFT Marketplaces: how listings and sales work, the major platforms, fees and creator royalties, supported chains, aggregators, and how to stay safe with your own wallet.">
-<link rel="canonical" href="https://nft-marketplaces.github.io/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="NFT Marketplaces Explained">
-<meta property="og:url" content="https://nft-marketplaces.github.io/">
-<meta property="og:image" content="https://nft-marketplaces.github.io/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NFT Marketplaces Explained">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NFT Marketplaces — How They Work, Fees & How to Pick One</title>
+  <meta name="description" content="A practical guide to NFT Marketplaces: how listings and sales work, the major platforms, fees and creator royalties, supported chains, aggregators, and how to stay safe with your own wallet.">
+  <link rel="canonical" href="https://nft-marketplaces.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NFT Marketplaces Explained">
+  <meta property="og:description" content="A practical guide to NFT Marketplaces: how listings and sales work, the major platforms, fees and creator royalties, supported chains, aggregators, and how to stay safe with your own wallet.">
+  <meta property="og:url" content="https://nft-marketplaces.github.io/">
+  <meta property="og:image" content="https://nft-marketplaces.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NFT Marketplaces Explained">
+  <meta name="twitter:description" content="A practical guide to NFT Marketplaces: how listings and sales work, the major platforms, fees and creator royalties, supported chains, aggregators, and how to stay safe with your own wallet.">
+  <meta name="twitter:image" content="https://nft-marketplaces.github.io/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://nft-marketplaces.github.io/#website", "url": "https://nft-marketplaces.github.io/", "name": "NFT Marketplaces — How They Work, Fees & How to Pick One"}, {"@type": "WebPage", "@id": "https://nft-marketplaces.github.io/#webpage", "url": "https://nft-marketplaces.github.io/", "name": "NFT Marketplaces — How They Work, Fees & How to Pick One", "isPartOf": {"@id": "https://nft-marketplaces.github.io/#website"}, "description": "A practical guide to NFT Marketplaces: how listings and sales work, the major platforms, fees and creator royalties, supported chains, aggregators, and how to stay safe with your own wallet.", "datePublished": "2026-10-11", "dateModified": "2026-10-11"}, {"@type": "SoftwareApplication", "name": "NFT Marketplaces", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nft-marketplaces.github.io/"}, {"@type": "ListItem", "position": 2, "name": "NFT"}, {"@type": "ListItem", "position": 3, "name": "NFT Marketplaces"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an NFT marketplace?", "acceptedAnswer": {"@type": "Answer", "text": "A platform where wallet-holders mint, list, and trade non-fungible tokens directly with each other. The marketplace hosts the listing and routes the transaction, but it never takes custody of the token or the funds."}}, {"@type": "Question", "name": "Which NFT marketplace has the lowest fees?", "acceptedAnswer": {"@type": "Answer", "text": "Fee structures change frequently and differ by platform and by chain, so compare the current marketplace fee plus any royalty and network gas at the time you trade rather than relying on a fixed ranking."}}, {"@type": "Question", "name": "Do all NFT marketplaces enforce creator royalties?", "acceptedAnswer": {"@type": "Answer", "text": "No. Some honor the royalty set at mint fully, some make it optional for the buyer, and a few do not apply it at all. Check a platform's current royalty policy before assuming a creator will be paid."}}, {"@type": "Question", "name": "Can I use the same wallet across multiple NFT marketplaces?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A single self-custody wallet works across virtually every marketplace on a given chain — you connect it, sign approvals, and your holdings and history stay with you rather than with any one platform."}}, {"@type": "Question", "name": "What is an NFT aggregator?", "acceptedAnswer": {"@type": "Answer", "text": "A tool that pulls live listings from several marketplaces at once so you can buy the cheapest available copy of a token, or relist across multiple platforms from one dashboard instead of repeating the process manually on each site."}}, {"@type": "Question", "name": "Which blockchain has the most NFT trading activity?", "acceptedAnswer": {"@type": "Answer", "text": "Ethereum holds the deepest historical liquidity and the most established collections, while Solana runs a large, fast, low-fee market of its own. Activity shifts over time, so checking a live tracker is more reliable than any fixed claim."}}, {"@type": "Question", "name": "How do I keep my wallet safe when using NFT marketplaces?", "acceptedAnswer": {"@type": "Answer", "text": "Grant listing approvals only for the specific token involved, revoke old allowances periodically, verify you are on the real platform domain, and never share your seed phrase — no legitimate marketplace or support account will ever ask for it."}}]}]}</script>
-<style>
-:root{--bg:#0C0A14;--surface:#15121F;--text:#EEE9F6;--muted:#998FA8;--accent:#A78BFA;--accent-ink:#140A22;--radius:14px;--display:"Space Grotesk";--body:"Inter"}
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
-  background: var(--bg);
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-  min-width: 280px;
-  color: var(--text);
-  background: var(--bg);
-  font-family: var(--body);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  overflow-wrap: break-word;
-}
-::selection {
-  color: var(--accent-ink);
-  background: var(--accent);
-}
-a {
-  color: var(--accent);
-  text-decoration-thickness: .075em;
-  text-underline-offset: .2em;
-  transition: color .18s ease, background .18s ease, border-color .18s ease;
-}
-a:hover {
-  color: var(--text);
-}
-a:focus-visible,
-summary:focus-visible,
-[tabindex]:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 5px;
-  border-radius: calc(var(--radius) * .35);
-}
-img,
-svg,
-video {
-  max-width: 100%;
-  vertical-align: middle;
-}
-img,
-video {
-  height: auto;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  color: var(--text);
-  font-family: var(--display);
-  font-weight: 650;
-  line-height: 1.2;
-  text-wrap: balance;
-}
-p,
-ul,
-ol,
-dl,
-figure,
-blockquote {
-  margin-top: 0;
-}
-[hidden] {
-  display: none !important;
-}
-.c6397a5 {
-  width: min(100% - 6rem, 1240px);
-  margin-inline: auto;
-}
-.c3a58c4 {
-  position: absolute;
-  z-index: 20;
-  top: 1rem;
-  left: 1rem;
-  padding: .75rem 1.15rem;
-  transform: translateY(-180%);
-  border-radius: var(--radius);
-  color: var(--accent-ink);
-  background: var(--accent);
-  font-weight: 600;
-}
-.c3a58c4:focus {
-  transform: translateY(0);
-}
-.cd35fc0 {
-  position: relative;
-  z-index: 1;
-  border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, var(--bg));
-  background: var(--bg);
-}
-.c762653 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  min-height: 88px;
-  padding-block: 1rem;
-}
-.c7b168c {
-  display: inline-flex;
-  align-items: center;
-  gap: .75rem;
-  color: var(--text);
-  font-family: var(--display);
-  font-size: 1.2rem;
-  font-weight: 650;
-  letter-spacing: -.04em;
-}
-.c71cc37 {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--surface));
-  border-radius: calc(var(--radius) * .55);
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
-}
-.c71cc37 svg {
-  width: 19px;
-  height: 19px;
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.c5966c6 {
-  display: inline-flex;
-  align-items: center;
-  gap: .8rem;
-  padding: .5rem 0;
-  color: var(--text);
-  font-size: .9rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-.c5966c6:hover {
-  color: var(--accent);
-}
-.c06af32 {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 15%, var(--bg));
-  background:
-    radial-gradient(ellipse at 95% 12%, color-mix(in srgb, var(--accent) 14%, transparent), color-mix(in srgb, var(--accent) 0%, transparent) 62%),
-    linear-gradient(130deg, var(--surface), color-mix(in srgb, var(--accent) 5%, var(--bg)) 70%, var(--bg));
-}
-.c06af32::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 520px;
-  height: 520px;
-  right: -240px;
-  bottom: -310px;
-  border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
-  border-radius: 50%;
-  box-shadow: 0 0 0 65px color-mix(in srgb, var(--accent) 3%, transparent), 0 0 0 130px color-mix(in srgb, var(--accent) 2%, transparent);
-  pointer-events: none;
-}
-.cca02b8 {
-  padding-block: 1.2rem 3rem;
-}
-.c15edb2 {
-  margin-bottom: 1.6rem;
-  color: var(--muted);
-  font-size: .8rem;
-  line-height: 1.6;
-}
-.c7a4ff9 {
-  display: inline;
-  color: var(--muted);
-  font-family: var(--body);
-  font-size: inherit;
-  text-decoration: none;
-}
-.c7a4ff9 a,
-a.c7a4ff9 {
-  color: var(--muted);
-  text-decoration: none;
-}
-.c7a4ff9 a:hover,
-a.c7a4ff9:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-.c15edb2 ol,
-.c15edb2 ul,
-ol.c7a4ff9,
-ul.c7a4ff9 {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: .45rem .7rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.c15edb2 li {
-  display: inline;
-}
-.c15edb2 [aria-current="page"] {
-  color: var(--text);
-}
-.c520de3 {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: .8rem;
-  margin-bottom: 1.35rem;
-  color: var(--accent);
-  font-size: .875rem;
-  font-weight: 600;
-}
-.cdcadc8 {
-  padding-block: .3rem;
-}
-.cbddafd {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 36px;
-  max-width: 180px;
-  padding: .4rem .65rem;
-  border: 1px solid color-mix(in srgb, var(--text) 9%, var(--surface));
-  border-radius: calc(var(--radius) * .6);
-  background: var(--surface);
-  box-shadow: 0 3px 10px color-mix(in srgb, var(--text) 4%, transparent);
-  color: var(--text);
-  font-size: .8rem;
-  line-height: 1;
-}
-.cbddafd:empty {
-  display: none;
-}
-.cbddafd img,
-.cbddafd svg {
-  display: block;
-  width: auto;
-  max-width: 148px;
-  height: 24px;
-  object-fit: contain;
-}
-.c06af32 h1 {
-  max-width: 1050px;
-  margin: 0 0 1.5rem;
-  font-family: var(--display);
-  font-size: clamp(2.7rem, 5.7vw, 5.1rem);
-  font-weight: 600;
-  line-height: 1.06;
-  letter-spacing: -.055em;
-  overflow-wrap: anywhere;
-}
-.c06af32 h1 em {
-  color: var(--accent);
-  font-style: normal;
-}
-.c06af32 h1 a {
-  color: inherit;
-}
-.cb355d5 {
-  max-width: 760px;
-  margin: 0 0 2.1rem;
-  color: var(--muted);
-  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
-  line-height: 1.75;
-  text-wrap: pretty;
-}
-.c748cff {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.7rem;
-  min-height: 54px;
-  padding: .85rem 1.35rem;
-  border: 1px solid var(--accent);
-  border-radius: var(--radius);
-  color: var(--accent-ink);
-  background: var(--accent);
-  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 18%, transparent);
-  font-family: var(--body);
-  font-size: .95rem;
-  font-weight: 650;
-  line-height: 1.4;
-  text-decoration: none;
-  transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
-}
-.c748cff:hover {
-  color: var(--accent-ink);
-  background: color-mix(in srgb, var(--accent) 92%, var(--text));
-  box-shadow: 0 9px 24px color-mix(in srgb, var(--accent) 24%, transparent);
-  transform: translateY(-2px);
-}
-.c082651 {
-  font-family: var(--body);
-  font-size: 1.25em;
-  line-height: 1;
-}
-.ce86c6a {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.82fr);
-  gap: clamp(2rem, 4vw, 3.75rem);
-  align-items: start;
-}
-.cd68bf5 {
-  min-width: 0;
-}
-.cd68bf5 .cb355d5 {
-  margin-bottom: 1.6rem;
-}
-.c061ee5 {
-  position: relative;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(1.15rem, 2vw, 1.65rem);
-  border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--surface));
-  border-radius: calc(var(--radius) * 1.4);
-  background: linear-gradient(158deg, color-mix(in srgb, var(--accent) 8%, var(--surface)), var(--surface) 46%);
-  box-shadow: 0 22px 60px -26px color-mix(in srgb, var(--text) 24%, transparent), 0 3px 12px -6px color-mix(in srgb, var(--accent) 14%, transparent);
-}
-.c061ee5::before {
-  content: "";
-  position: absolute;
-  inset: -1px 14% auto;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 60%, transparent), transparent);
-}
-.ca58350 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.6rem 1rem;
-  margin-bottom: 1rem;
-}
-.ca58350 h2 {
-  margin: 0;
-  font-family: var(--display);
-  font-size: 1.15rem;
-  font-weight: 650;
-  letter-spacing: -0.03em;
-}
-.cd2aadd {
-  display: inline-flex;
-  align-items: center;
-  max-width: 100%;
-  padding: 0.28rem 0.62rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
-  color: var(--accent);
-  font-size: 0.72rem;
-  font-weight: 600;
-  overflow-wrap: anywhere;
-}
-.c2e5805 .c4052f3 {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-}
-.c2e5805 .c4052f3 th,
-.c2e5805 .c4052f3 td {
-  padding: 0.58rem 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
-  vertical-align: top;
-  text-align: left;
-  overflow-wrap: anywhere;
-}
-.c2e5805 .c4052f3 tr:last-child th,
-.c2e5805 .c4052f3 tr:last-child td {
-  border-bottom: 0;
-}
-.c2e5805 .c4052f3 th {
-  width: 38%;
-  padding-right: 0.9rem;
-  color: var(--muted);
-  font-weight: 500;
-}
-.c2e5805 .c4052f3 td {
-  color: var(--text);
-  font-weight: 550;
-}
-.c43495c {
-  margin-top: 1.15rem;
-  width: 100%;
-}
-@media (max-width: 920px) {
-  .ce86c6a {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-  }
-  .c061ee5 {
-    width: 100%;
-    max-width: 560px;
-  }
-}
-.summary-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  margin-block: 1.5rem 4.5rem;
-}
-.summary-item {
-  min-width: 0;
-  padding: 1.2rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--text) 9%, var(--surface));
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 3px 12px color-mix(in srgb, var(--text) 3%, transparent);
-}
-.summary-item strong {
-  display: block;
-  margin-bottom: .2rem;
-  color: var(--text);
-  font-family: var(--display);
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -.02em;
-}
-.summary-item span {
-  display: block;
-  color: var(--muted);
-  font-size: .8rem;
-  line-height: 1.5;
-}
-.c0898f8 {
-  display: grid;
-  grid-template-columns: 235px minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(2.5rem, 5vw, 5rem);
-  padding-bottom: 4.5rem;
-}
-.cc2a48f {
-  position: sticky;
-  top: 2rem;
-  min-width: 0;
-  max-height: calc(100dvh - 4rem);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--muted) 35%, var(--surface)) var(--surface);
-  padding: .3rem .75rem 1rem .25rem;
-}
-.c197c1b {
-  margin: 0 0 1.1rem;
-  color: var(--text);
-  font-family: var(--display);
-  font-size: .95rem;
-  font-weight: 650;
-  letter-spacing: -.02em;
-}
-.c078627 {
-  display: grid;
-  gap: .3rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.c078627 li {
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-}
-.cfd0977 {
-  position: relative;
-  display: block;
-  padding: .7rem .9rem .7rem 1.1rem;
-  border-inline-start: 2px solid color-mix(in srgb, var(--muted) 18%, var(--bg));
-  border-radius: 0 calc(var(--radius) * .55) calc(var(--radius) * .55) 0;
-  color: var(--muted);
-  font-family: var(--body);
-  font-size: .85rem;
-  font-weight: 450;
-  line-height: 1.5;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-.cfd0977:hover {
-  border-inline-start-color: color-mix(in srgb, var(--accent) 45%, var(--bg));
-  color: var(--text);
-  background: color-mix(in srgb, var(--accent) 5%, var(--bg));
-}
-.cfd0977[aria-current="location"] {
-  border-inline-start-color: var(--accent);
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 9%, var(--bg));
-  font-weight: 650;
-}
-.ce15af5 {
-  margin: 1.65rem 0 0;
-  padding: 1.2rem 0 0;
-  border-top: 1px solid color-mix(in srgb, var(--text) 10%, var(--bg));
-  color: var(--muted);
-  font-size: .78rem;
-  line-height: 1.65;
-}
-.c2fe1bb {
-  min-width: 0;
-}
-.facts-panel {
-  padding: clamp(1.3rem, 3vw, 2.3rem);
-  margin-bottom: 3.75rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--surface));
-  border-top: 3px solid var(--accent);
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 10px 35px color-mix(in srgb, var(--text) 5%, transparent);
-  scroll-margin-top: 2rem;
-}
-.panel-heading {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: .5rem 1.5rem;
-  justify-content: space-between;
-  margin-bottom: 1.4rem;
-}
-.panel-heading h2 {
-  margin: 0;
-  font-size: clamp(1.45rem, 2.3vw, 1.85rem);
-  letter-spacing: -.04em;
-}
-.panel-heading p {
-  margin: 0;
-  color: var(--muted);
-  font-size: .8rem;
-}
-.facts-content {
-  min-width: 0;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--muted) var(--surface);
-}
-.c4052f3 {
-  width: 100%;
-  border-collapse: collapse;
-  color: var(--text);
-  font-family: var(--body);
-  font-size: .925rem;
-  line-height: 1.6;
-  text-align: left;
-}
-.c4052f3 caption {
-  padding: 0 0 1rem;
-  color: var(--muted);
-  font-size: .85rem;
-  text-align: left;
-}
-.c4052f3 th,
-.c4052f3 td {
-  padding: 1.05rem .85rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--text) 9%, var(--surface));
-  vertical-align: top;
-  overflow-wrap: anywhere;
-}
-.c4052f3 th {
-  width: 37%;
-  color: var(--muted);
-  font-weight: 500;
-}
-.c4052f3 thead th {
-  color: var(--text);
-  background: color-mix(in srgb, var(--accent) 5%, var(--surface));
-  font-weight: 650;
-}
-.c4052f3 td {
-  font-weight: 550;
-}
-.c4052f3 tr > :first-child {
-  padding-left: 0;
-}
-.c4052f3 tr > :last-child {
-  padding-right: 0;
-}
-.c4052f3 tbody:last-child tr:last-child > *,
-.c4052f3 > tr:last-child > * {
-  border-bottom: 0;
-}
-.c4052f3 td p:last-child,
-.c4052f3 th p:last-child {
-  margin-bottom: 0;
-}
-.cd3d51b {
-  min-width: 0;
-}
-.c24951a {
-  min-width: 0;
-  margin: 0 0 3.4rem;
-  scroll-margin-top: 2rem;
-}
-.c24951a + .c24951a {
-  padding-top: 2.8rem;
-  border-top: 1px solid color-mix(in srgb, var(--text) 11%, var(--bg));
-}
-.c26ec5e {
-  margin: 0 0 1.25rem;
-  color: var(--text);
-  font-family: var(--display);
-  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
-  font-weight: 600;
-  line-height: 1.22;
-  letter-spacing: -.045em;
-}
-.c16b891 {
-  color: var(--text);
-  font-family: var(--body);
-  font-size: 1rem;
-  line-height: 1.85;
-  overflow-wrap: anywhere;
-}
-.c16b891 > :last-child {
-  margin-bottom: 0;
-}
-.c16b891 p {
-  margin: 0 0 1.3rem;
-  text-wrap: pretty;
-}
-.c16b891 h3 {
-  margin: 2rem 0 .9rem;
-  font-size: clamp(1.2rem, 2vw, 1.45rem);
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -.025em;
-}
-.c16b891 h4,
-.c16b891 h5,
-.c16b891 h6 {
-  margin: 1.6rem 0 .75rem;
-  font-size: 1.075rem;
-  line-height: 1.4;
-}
-.c16b891 h3:first-child,
-.c16b891 h4:first-child {
-  margin-top: 0;
-}
-.c16b891 strong,
-.cb1ce69 strong {
-  color: var(--text);
-  font-weight: 650;
-}
-.c16b891 ul,
-.c16b891 ol,
-.cb1ce69 ul,
-.cb1ce69 ol {
-  margin: 1.2rem 0 1.6rem;
-  padding-left: 1.5rem;
-}
-.c16b891 li,
-.cb1ce69 li {
-  padding-left: .4rem;
-  margin-block: .55rem;
-}
-.c16b891 li::marker,
-.cb1ce69 li::marker {
-  color: var(--accent);
-  font-weight: 600;
-}
-.c16b891 li > ul,
-.c16b891 li > ol {
-  margin-block: .5rem;
-}
-.c16b891 li p {
-  margin-bottom: .6rem;
-}
-.c16b891 blockquote {
-  margin: 1.8rem 0;
-  padding: 1.3rem 1.5rem;
-  border-inline-start: 3px solid var(--accent);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
-  color: var(--text);
-  font-size: 1.05rem;
-}
-.c16b891 blockquote > :last-child {
-  margin-bottom: 0;
-}
-.c16b891 blockquote cite {
-  display: block;
-  margin-top: .9rem;
-  color: var(--muted);
-  font-size: .85rem;
-  font-style: normal;
-}
-.c16b891 table {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 1.7rem 0;
-  overflow-x: auto;
-  border: 1px solid color-mix(in srgb, var(--text) 12%, var(--surface));
-  border-radius: var(--radius);
-  border-spacing: 0;
-  background: var(--surface);
-  font-family: var(--body);
-  font-size: .875rem;
-  line-height: 1.65;
-  text-align: left;
-  scrollbar-width: thin;
-  scrollbar-color: var(--muted) var(--surface);
-}
-.c16b891 table caption {
-  padding: .9rem 1rem;
-  color: var(--muted);
-  font-size: .82rem;
-  text-align: left;
-}
-.c16b891 th,
-.c16b891 td {
-  min-width: 125px;
-  padding: 1rem 1.15rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--text) 9%, var(--surface));
-  vertical-align: top;
-}
-.c16b891 th {
-  color: var(--text);
-  background: color-mix(in srgb, var(--accent) 7%, var(--surface));
-  font-weight: 650;
-}
-.c16b891 tbody tr:nth-child(even) {
-  background: color-mix(in srgb, var(--text) 2%, var(--surface));
-}
-.c16b891 tbody:last-child tr:last-child > * {
-  border-bottom: 0;
-}
-.c16b891 td > :last-child,
-.c16b891 th > :last-child {
-  margin-bottom: 0;
-}
-.c16b891 figure {
-  margin: 1.8rem 0;
-}
-.c16b891 figure img {
-  display: block;
-  border-radius: var(--radius);
-}
-.c16b891 figcaption {
-  margin-top: .7rem;
-  color: var(--muted);
-  font-size: .8rem;
-  line-height: 1.6;
-}
-.c16b891 code,
-.cb1ce69 code {
-  padding: .1em .35em;
-  border-radius: calc(var(--radius) * .25);
-  background: color-mix(in srgb, var(--accent) 7%, var(--surface));
-  color: var(--text);
-  font-family: var(--body);
-  font-size: .9em;
-}
-.c16b891 pre {
-  overflow-x: auto;
-  padding: 1.2rem;
-  border: 1px solid color-mix(in srgb, var(--text) 10%, var(--surface));
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--text);
-  font-family: var(--body);
-  font-size: .875rem;
-  line-height: 1.7;
-}
-.c16b891 pre code {
-  padding: 0;
-  background: var(--surface);
-}
-.c16b891 hr {
-  margin: 2rem 0;
-  border: 0;
-  border-top: 1px solid color-mix(in srgb, var(--text) 12%, var(--bg));
-}
-.c16b891 dt {
-  margin-top: 1.1rem;
-  color: var(--text);
-  font-weight: 650;
-}
-.c16b891 dd {
-  margin: .4rem 0 1rem;
-  color: var(--muted);
-}
-.cf0409b {
-  padding-top: 2.75rem;
-  border-top: 1px solid color-mix(in srgb, var(--text) 11%, var(--bg));
-  scroll-margin-top: 2rem;
-}
-.cf0409b > .c26ec5e {
-  margin-bottom: 1.65rem;
-}
-.c78107a {
-  margin: 0 0 .8rem;
-  border: 1px solid color-mix(in srgb, var(--text) 11%, var(--surface));
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 3px 12px color-mix(in srgb, var(--text) 3%, transparent);
-  overflow: clip;
-  transition: border-color .2s ease, box-shadow .2s ease;
-}
-.c78107a:hover {
-  border-color: color-mix(in srgb, var(--accent) 35%, var(--surface));
-}
-.c78107a[open] {
-  border-color: color-mix(in srgb, var(--accent) 35%, var(--surface));
-  box-shadow: 0 6px 20px color-mix(in srgb, var(--text) 4%, transparent);
-}
-.c39087f {
-  position: relative;
-  display: block;
-  padding: 1.35rem 3.8rem 1.35rem 1.4rem;
-  color: var(--text);
-  font-family: var(--display);
-  font-size: 1.025rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -.015em;
-  list-style: none;
-  cursor: pointer;
-}
-.c39087f::-webkit-details-marker {
-  display: none;
-}
-.c39087f::after {
-  content: "+";
-  position: absolute;
-  top: 1.3rem;
-  right: 1.35rem;
-  display: grid;
-  place-items: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent) 9%, var(--surface));
-  color: var(--accent);
-  font-family: var(--body);
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1;
-}
-.c78107a[open] > .c39087f::after {
-  content: "−";
-}
-.c78107a > .c39087f:focus-visible {
-  outline-offset: -5px;
-}
-.cb1ce69 {
-  padding: 0 1.4rem 1.45rem;
-  color: var(--muted);
-  font-family: var(--body);
-  font-size: .95rem;
-  line-height: 1.8;
-}
-.cb1ce69 > :first-child {
-  margin-top: 0;
-}
-.cb1ce69 > :last-child {
-  margin-bottom: 0;
-}
-.cb1ce69 p {
-  margin-bottom: 1rem;
-}
-.cf09ff4 {
-  padding-block: 3rem 3.6rem;
-  border-top: 1px solid color-mix(in srgb, var(--text) 10%, var(--bg));
-  background: color-mix(in srgb, var(--surface) 70%, var(--bg));
-  scroll-margin-top: 2rem;
-}
-.ca613b7 {
-  display: grid;
-  grid-template-columns: 235px minmax(0, 1fr);
-  gap: clamp(2.5rem, 5vw, 5rem);
-}
-.c797da0 h2 {
-  margin-bottom: .7rem;
-  font-size: 1.4rem;
-  letter-spacing: -.035em;
-}
-.c797da0 p {
-  margin: 0;
-  color: var(--muted);
-  font-size: .85rem;
-  line-height: 1.7;
-}
-.c47ebef {
-  min-width: 0;
-}
-.c3d2440 {
-  display: grid;
-  gap: .7rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-family: var(--body);
-}
-.c51e717 {
-  display: block;
-  min-width: 0;
-  padding: 1rem 1.2rem;
-  border: 1px solid color-mix(in srgb, var(--text) 9%, var(--surface));
-  border-radius: calc(var(--radius) * .75);
-  background: var(--surface);
-  color: var(--muted);
-  font-family: var(--body);
-  font-size: .875rem;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-.c51e717 a,
-a.c51e717 {
-  color: var(--text);
-  text-decoration-color: color-mix(in srgb, var(--accent) 35%, var(--surface));
-  text-underline-offset: .25em;
-}
-.c51e717 a:hover,
-a.c51e717:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-}
-.c51e717 p {
-  margin: .4rem 0 0;
-}
-.c51e717 small {
-  color: var(--muted);
-  font-size: .8rem;
-}
-.c12ec0d {
-  border-top: 1px solid color-mix(in srgb, var(--text) 10%, var(--bg));
-  background: var(--bg);
-}
-.c3700ca {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem 2rem;
-  min-height: 100px;
-  padding-block: 1.5rem;
-}
-.c953e84 {
-  color: var(--text);
-  font-family: var(--display);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: -.025em;
-}
-.c2ceb17 {
-  margin: 0;
-  color: var(--muted);
-  font-size: .8rem;
-}
-.c2ceb17 span {
-  color: var(--text);
-}
-@media (min-width: 1500px) {
-  .cca02b8 {
-    padding-bottom: 6rem;
-  }
-  .c15edb2 {
-    margin-bottom: 4.5rem;
-  }
-  .c0898f8 {
-    gap: 5.5rem;
-  }
-  .ca613b7 {
-    gap: 5.5rem;
-  }
-}
-@media (max-width: 1050px) {
-  .c6397a5 {
-    width: calc(100% - 3rem);
-  }
-  .c0898f8,
-  .ca613b7 {
-    grid-template-columns: 190px minmax(0, 1fr);
-    gap: 2.25rem;
-  }
-  .summary-strip {
-    gap: .75rem;
-  }
-  .summary-item {
-    padding: 1rem;
-  }
-  .cfd0977 {
-    font-size: .8rem;
-  }
-}
-@media (max-width: 760px) {
-  html {
-    scroll-padding-top: 1rem;
-  }
-  .c762653 {
-    min-height: 72px;
-  }
-  .cca02b8 {
-    padding-block: 1.25rem 3.25rem;
-  }
-  .c15edb2 {
-    margin-bottom: 2.6rem;
-  }
-  .c06af32 h1 {
-    max-width: 100%;
-    font-size: clamp(2.45rem, 7.4vw, 3.6rem);
-    letter-spacing: -.045em;
-  }
-  .cb355d5 {
-    font-size: 1.05rem;
-  }
-  .summary-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-block: 1.2rem 2.5rem;
-  }
-  .c0898f8 {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2.3rem;
-    padding-bottom: 3rem;
-  }
-  .cc2a48f {
-    position: static;
-    max-height: none;
-    padding: 1.2rem;
-    border: 1px solid color-mix(in srgb, var(--text) 10%, var(--surface));
-    border-radius: var(--radius);
-    background: var(--surface);
-  }
-  .c197c1b {
-    margin-bottom: .8rem;
-  }
-  .c078627 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: .4rem .8rem;
-  }
-  .cfd0977 {
-    height: 100%;
-    padding-block: .7rem;
-    font-size: .825rem;
-  }
-  .ce15af5 {
-    display: none;
-  }
-  .facts-panel {
-    margin-bottom: 2.5rem;
-  }
-  .c24951a {
-    margin-bottom: 2.6rem;
-  }
-  .c24951a + .c24951a {
-    padding-top: 2.2rem;
-  }
-  .ca613b7 {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
-  }
-  .cf09ff4 {
-    padding-block: 2.5rem;
-  }
-  .c24951a,
-  .facts-panel,
-  .cf0409b,
-  .cf09ff4 {
-    scroll-margin-top: 1rem;
-  }
-}
-@media (max-width: 440px) {
-  .c6397a5 {
-    width: calc(100% - 2rem);
-  }
-  .c762653 {
-    gap: 1rem;
-  }
-  .c7b168c {
-    gap: .5rem;
-    font-size: 1.05rem;
-  }
-  .c5966c6 {
-    gap: .45rem;
-    font-size: .8rem;
-  }
-  .c520de3 {
-    gap: .65rem;
-    margin-bottom: 1.1rem;
-  }
-  .c06af32 h1 {
-    font-size: 2.5rem;
-  }
-  .c748cff {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .summary-item {
-    padding: .9rem;
-  }
-  .summary-item strong {
-    font-size: .9rem;
-  }
-  .summary-item span {
-    font-size: .75rem;
-  }
-  .c078627 {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .facts-panel {
-    padding: 1.15rem;
-  }
-  .c4052f3 {
-    font-size: .85rem;
-  }
-  .c4052f3 th,
-  .c4052f3 td {
-    padding-block: .9rem;
-    padding-inline: .5rem;
-  }
-  .c16b891 {
-    font-size: .95rem;
-    line-height: 1.8;
-  }
-  .c16b891 blockquote {
-    padding: 1rem 1.1rem;
-  }
-  .c39087f {
-    padding: 1.1rem 3rem 1.1rem 1.1rem;
-    font-size: .95rem;
-  }
-  .c39087f::after {
-    top: 1.1rem;
-    right: .9rem;
-  }
-  .cb1ce69 {
-    padding: 0 1.1rem 1.2rem;
-    font-size: .9rem;
-  }
-  .c3700ca {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: .6rem;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-  }
-  .c748cff:hover {
-    transform: none;
-  }
-}
-@media print {
-  body {
-    background: var(--surface);
-    font-size: 10pt;
-  }
-  .c6397a5 {
-    width: 100%;
-  }
-  .cd35fc0,
-  .c3a58c4,
-  .c748cff,
-  .cc2a48f,
-  .c06af32::after {
-    display: none;
-  }
-  .c06af32 {
-    background: var(--surface);
-  }
-  .cca02b8 {
-    padding-block: 1rem 2rem;
-  }
-  .c15edb2 {
-    margin-bottom: 1.5rem;
-  }
-  .c06af32 h1 {
-    font-size: 32pt;
-  }
-  .summary-strip {
-    margin-bottom: 2rem;
-  }
-  .c0898f8,
-  .ca613b7 {
-    display: block;
-  }
-  .facts-panel,
-  .summary-item,
-  .c78107a {
-    box-shadow: none;
-  }
-  .c26ec5e,
-  .c16b891 h3 {
-    break-after: avoid;
-  }
-  .c78107a,
-  .c51e717,
-  .c16b891 tr {
-    break-inside: avoid;
-  }
-  .c797da0 {
-    margin-bottom: 1rem;
-  }
-}
-</style>
+  <style>
+    :root{--bg:#0C0A14;--surface:#15121F;--text:#EEE9F6;--muted:#998FA8;--accent:#A78BFA;--accent-ink:#140A22;--radius:14px;--display:"Space Grotesk";--body:"Inter"}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: .12em; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    ::selection { background: var(--accent); color: var(--accent-ink); }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--display); line-height: 1.15; text-wrap: balance; }
+    p, h1, h2, h3 { margin-top: 0; }
+    img, svg { max-width: 100%; vertical-align: middle; }
+    .c6397a5 { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
+    .c3a58c4 { position: absolute; z-index: 5; top: .5rem; left: 1rem; padding: .7rem 1rem; background: var(--surface); transform: translateY(-180%); border-radius: var(--radius); }
+    .c3a58c4:focus { transform: translateY(0); }
+    .c6a9232 { border-bottom: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
+    .cf198f1 { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .c9ed366 { display: inline-flex; align-items: center; gap: .7rem; color: var(--text); font: 650 1.12rem/1.2 var(--display); text-decoration: none; }
+    .cca4a0d { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: calc(var(--radius) * .6); background: var(--accent); color: var(--accent-ink); }
+    .c98e943 { width: 1.2rem; height: 1.2rem; fill: none; stroke: var(--accent-ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+    .cd31cb3 { display: flex; align-items: center; gap: 1.8rem; }
+    .cd31cb3 > a { font-size: .88rem; font-weight: 600; text-decoration: none; }
+    .cd31cb3 > a:not(.c5104e1) { color: var(--muted); }
+    .c5104e1 { display: inline-flex; align-items: center; justify-content: center; gap: .8rem; min-height: 52px; padding: .85rem 1.4rem; border: 1px solid color-mix(in srgb,var(--accent-ink) 12%,transparent); border-radius: var(--radius); background: linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 88%,var(--text))); color: var(--accent-ink); font: 650 .95rem/1.3 var(--body); text-decoration: none; box-shadow: 0 6px 18px color-mix(in srgb,var(--accent) 17%,transparent); transition: transform .18s ease, box-shadow .18s ease; }
+    .c5104e1:hover { transform: translateY(-2px); box-shadow: 0 9px 24px color-mix(in srgb,var(--accent) 25%,transparent); }
+    .cf198f1 .c5104e1 { min-height: 42px; padding: .65rem 1rem; }
+    .c15edb2 { padding-block: 1rem 0; color: var(--muted); font-size: .8rem; overflow-wrap: anywhere; }
+    .c7a4ff9 { color: var(--muted); }
+    .c7a4ff9 a, a.c7a4ff9 { color: var(--muted); text-decoration: none; }
+    .c7a4ff9 a:hover, a.c7a4ff9:hover { color: var(--accent); text-decoration: underline; }
+    .c7a4ff9 ol, .c7a4ff9 ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: 0; margin: 0; list-style: none; }
+    .c06af32 { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: clamp(2rem,5vw,4.5rem); align-items: start; padding-block: 1.5rem 3rem; }
+    .c78c547 { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.3rem; color: var(--accent); font-size: .86rem; font-weight: 600; }
+    .c78c547::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb,var(--accent) 9%,transparent); }
+    h1 { margin-bottom: 1.4rem; font-size: clamp(2.5rem,4.7vw,4.35rem); font-weight: 600; letter-spacing: -.055em; overflow-wrap: anywhere; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .c19abce { max-width: 48ch; margin-bottom: 2rem; color: var(--muted); font-size: 1.08rem; line-height: 1.8; }
+    .ca02b6b { position: relative; min-width: 0; padding: clamp(1.1rem,2.4vw,1.5rem); border: 1px solid color-mix(in srgb,var(--accent) 20%,var(--surface)); border-radius: calc(var(--radius) * 1.6); background: linear-gradient(155deg,color-mix(in srgb,var(--accent) 7%,var(--surface)),var(--surface) 40%); box-shadow: 0 24px 64px color-mix(in srgb,var(--text) 9%,transparent),0 4px 12px color-mix(in srgb,var(--accent) 6%,transparent); }
+    .c488dab { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .7rem; margin-bottom: 1rem; }
+    .c488dab h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.035em; }
+    .c7a2a4b { display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .65rem; border: 1px solid color-mix(in srgb,var(--accent) 16%,transparent); border-radius: 999px; background: color-mix(in srgb,var(--accent) 8%,var(--surface)); color: var(--accent); font-size: .72rem; font-weight: 600; }
+    .c7a2a4b::before { content: ""; width: .35rem; height: .35rem; border-radius: 50%; background: var(--accent); }
+    .route { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: .8rem; padding: .8rem; margin-bottom: 1rem; border: 1px solid color-mix(in srgb,var(--text) 9%,transparent); border-radius: var(--radius); background: var(--surface); }
+    .endpoint { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; }
+    .endpoint:last-child { align-items: flex-end; }
+    .endpoint-label, .c571af7 { color: var(--muted); font-size: .78rem; font-weight: 500; }
+    .logo { display: flex; align-items: center; min-height: 36px; max-width: 100%; overflow-wrap: anywhere; font: 600 1rem/1.3 var(--display); }
+    .logo img, .logo svg { max-height: 36px; width: auto; max-width: 100%; object-fit: contain; }
+    .route-arrow { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: color-mix(in srgb,var(--accent) 9%,var(--surface)); }
+    .route-arrow .c98e943 { stroke: var(--accent); }
+    .c571af7 { display: block; margin-bottom: .5rem; color: var(--text); }
+    .amount-field { display: flex; align-items: center; gap: .75rem; padding: .8rem 1rem; border: 1px solid color-mix(in srgb,var(--text) 18%,transparent); border-radius: var(--radius); background: var(--bg); transition: border-color .18s ease; }
+    .amount-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent); }
+    .amount-field input { width: 100%; min-width: 0; padding: .2rem 0; border: 0; background: var(--bg); color: var(--text); font: 550 1.6rem/1.2 var(--display); font-variant-numeric: tabular-nums; }
+    .amount-field input:focus { outline: 0; }
+    .unit { color: var(--muted); font-size: .8rem; }
+    .c56a7f7 { margin: .45rem 0 .85rem; color: var(--muted); font-size: .74rem; }
+    .field-error { margin: .5rem 0; color: var(--text); font-size: .8rem; font-weight: 600; }
+    [hidden] { display: none !important; }
+    .estimate { padding: 1rem; border-radius: var(--radius); background: linear-gradient(120deg,color-mix(in srgb,var(--accent) 12%,var(--surface)),color-mix(in srgb,var(--accent) 4%,var(--surface))); }
+    .estimate-label { margin-bottom: .25rem; color: var(--muted); font-size: .8rem; }
+    .estimate-value { display: block; color: var(--text); font: 600 clamp(1.7rem,3vw,2.5rem)/1.3 var(--display); letter-spacing: -.04em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+    .estimate-value small { color: var(--muted); font: 400 .8rem/1.4 var(--body); letter-spacing: 0; }
+    .estimate dl { display: grid; gap: .5rem; margin: .8rem 0 0; padding-top: .8rem; border-top: 1px solid color-mix(in srgb,var(--accent) 15%,transparent); font-size: .8rem; }
+    .estimate dl div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; }
+    .estimate dt { color: var(--muted); }
+    .estimate dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .method { margin-block: .7rem; color: var(--muted); font-size: .75rem; }
+    .method summary { width: fit-content; color: var(--text); cursor: pointer; }
+    .method p { margin: .65rem 0 0; }
+    .ca02b6b > .c5104e1 { width: 100%; }
+    .c649698 { padding: .8rem 1rem; border: 1px solid color-mix(in srgb,var(--text) 10%,transparent); border-radius: var(--radius); background: var(--surface); }
+    .c8e33d9 { margin-bottom: .45rem; }
+    .c42ddde { display: flex; align-items: center; gap: .75rem; }
+    .c965722 { flex: 1; min-width: 0; padding: 0; border: 0; background: transparent; color: var(--text); font: 550 1.55rem/1.2 var(--display); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+    .c965722:focus { outline: 0; }
+    .c4feb50 { position: relative; display: inline-flex; align-items: center; gap: .5rem; flex: none; padding: .4rem 1.5rem .4rem .5rem; border: 1px solid color-mix(in srgb,var(--text) 13%,transparent); border-radius: 999px; background: var(--bg); }
+    .c6876f4 { width: 22px; height: 22px; border-radius: 50%; object-fit: contain; flex: none; }
+    .c758717 { border: 0; background: transparent; color: var(--text); font: 600 .95rem/1 var(--body); cursor: pointer; appearance: none; -webkit-appearance: none; }
+    .c758717:focus { outline: 0; }
+    .c4feb50::after { content: ""; position: absolute; right: .7rem; width: .42rem; height: .42rem; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(-2px) rotate(45deg); pointer-events: none; }
+    .c8f5421 { margin-top: .4rem; color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
+    .swap-switch { position: relative; z-index: 1; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; margin: -.55rem auto; padding: 0; border: 3px solid var(--surface); border-radius: 50%; background: color-mix(in srgb,var(--accent) 13%,var(--surface)); color: var(--accent); cursor: pointer; transition: transform .2s ease, background .2s ease; }
+    .swap-switch svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .swap-switch:hover { transform: rotate(180deg); background: color-mix(in srgb,var(--accent) 20%,var(--surface)); }
+    .c740829 { display: grid; gap: .5rem; margin: 1rem 0 0; padding-top: .9rem; border-top: 1px solid color-mix(in srgb,var(--accent) 15%,transparent); font-size: .82rem; }
+    .c740829 div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; }
+    .c740829 dt { color: var(--muted); }
+    .c740829 dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .c09c69b > .c5104e1 { width: 100%; margin-top: 1.05rem; }
+    .ccd0366 { width: 100%; padding: .15rem 0; font: 600 1.1rem/1.2 var(--display); }
+    .ce533d6 { font: 600 .95rem/1 var(--body); color: var(--text); }
+    .c032a1d { padding: 2rem; border: 1px solid color-mix(in srgb,var(--text) 10%,transparent); border-radius: calc(var(--radius) * 1.3); background: var(--surface); }
+    .c067e31 { margin-bottom: 1.3rem; font-size: 1.65rem; font-weight: 550; letter-spacing: -.035em; }
+    .c667b71 { max-width: 100%; overflow-x: auto; }
+    .c4052f3 { width: 100%; border-collapse: collapse; text-align: left; font-size: .92rem; }
+    .c4052f3 caption { padding-bottom: 1rem; text-align: left; color: var(--muted); }
+    .c4052f3 th, .c4052f3 td { padding: 1rem 1.1rem; border-bottom: 1px solid color-mix(in srgb,var(--text) 9%,transparent); vertical-align: top; overflow-wrap: anywhere; }
+    .c4052f3 th { color: var(--muted); font-weight: 500; }
+    .c4052f3 thead { background: color-mix(in srgb,var(--accent) 5%,var(--surface)); }
+    .c4052f3 tbody tr:last-child > * { border-bottom: 0; }
+    .c3f1ea0 { max-width: 820px; padding-block: 4rem 2rem; }
+    .c24951a { margin-bottom: 3.3rem; }
+    .c26ec5e { margin: 0 0 1.1rem; font: 550 clamp(1.6rem,3vw,2.2rem)/1.2 var(--display); letter-spacing: -.035em; }
+    .c16b891 { color: var(--muted); line-height: 1.85; overflow-wrap: anywhere; }
+    .c16b891 p { margin-bottom: 1.2rem; }
+    .c16b891 strong, .c16b891 h3, .c16b891 h4 { color: var(--text); }
+    .c16b891 ul, .c16b891 ol { padding-left: 1.3rem; }
+    .c16b891 li { padding-left: .3rem; margin-block: .55rem; }
+    .c16b891 li::marker { color: var(--accent); }
+    .c16b891 blockquote { margin: 1.5rem 0; padding: 1rem 1.4rem; border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); color: var(--text); }
+    .c16b891 img { height: auto; border-radius: var(--radius); }
+    .c16b891 pre { overflow-x: auto; padding: 1rem; border-radius: var(--radius); background: var(--surface); }
+    .c16b891 code, .c16b891 pre { font-family: var(--body); }
+    .c78107a { margin-block: .8rem; border: 1px solid color-mix(in srgb,var(--text) 11%,transparent); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+    .c39087f { position: relative; padding: 1.3rem 3.5rem 1.3rem 1.4rem; list-style: none; cursor: pointer; color: var(--text); font: 550 1.04rem/1.5 var(--display); }
+    .c39087f::-webkit-details-marker { display: none; }
+    .c39087f::after { content: "+"; position: absolute; right: 1.4rem; top: 1.2rem; color: var(--accent); font-size: 1.3rem; }
+    details[open] > .c39087f::after { content: "−"; }
+    .c78107a[open] { border-color: color-mix(in srgb,var(--accent) 35%,var(--surface)); }
+    .c39087f:focus-visible { outline-offset: -5px; }
+    .cb1ce69 { padding: 0 1.4rem 1.4rem; color: var(--muted); overflow-wrap: anywhere; }
+    .cb1ce69 > :last-child { margin-bottom: 0; }
+    .c055db6 { max-width: 820px; padding-block: 1.5rem 3.5rem; border-top: 1px solid color-mix(in srgb,var(--text) 12%,transparent); }
+    .c055db6 .c067e31 { font-size: 1.25rem; }
+    .c3d2440 { margin: 0; padding-left: 1.25rem; color: var(--muted); font-size: .88rem; }
+    .c51e717 { padding-block: .4rem; padding-left: .25rem; overflow-wrap: anywhere; }
+    .c51e717 a, a.c51e717 { color: var(--text); text-decoration-color: color-mix(in srgb,var(--accent) 45%,transparent); }
+    .c51e717 a:hover, a.c51e717:hover { color: var(--accent); }
+    .c12ec0d { border-top: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
+    .c3700ca { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; min-height: 96px; padding-block: 1.5rem; color: var(--muted); font-size: .8rem; }
+    .c3700ca p { margin: 0; }
+    .c3700ca a { color: var(--muted); }
+    @media (max-width: 850px) { .c06af32 { grid-template-columns: minmax(0,1fr); gap: 2.5rem; padding-block: 2.5rem 3.5rem; } .cd68bf5 { max-width: 650px; } .ca02b6b { width: 100%; max-width: 600px; justify-self: center; } h1 { font-size: clamp(2.5rem,7vw,4rem); } .c19abce { max-width: 60ch; } }
+    @media (max-width: 540px) { .c6397a5 { width: calc(100% - 2rem); } .cf198f1 { min-height: 76px; gap: .7rem; } .c9ed366 { font-size: .95rem; gap: .45rem; } .cca4a0d { width: 2rem; height: 2rem; } .cd31cb3 { gap: .6rem; } .cd31cb3 > a:not(.c5104e1) { display: none; } .cf198f1 .c5104e1 { padding-inline: .85rem; font-size: .8rem; } .c032a1d { padding: 1.25rem; } .c4052f3 th, .c4052f3 td { padding: .8rem .55rem; } .cd68bf5 > .c5104e1 { width: 100%; } .c3f1ea0 { padding-top: 2.8rem; } .c3700ca { align-items: flex-start; flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .c5104e1, .amount-field { transition: none; } .c5104e1:hover { transform: none; } }
+  </style>
 </head>
 <body>
-<a class="c3a58c4" href="#guide-main">Skip to guide</a>
-<header class="cd35fc0">
-  <div class="c6397a5 c762653">
-    <div class="c7b168c">
-      <span class="c71cc37" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h6a3 3 0 0 1 2 1 3 3 0 0 1 2-1h6v14h-6a3 3 0 0 0-2 1 3 3 0 0 0-2-1H4zM12 6.5v14M7 9h2M15 9h2M7 12h2M15 12h2"/></svg></span>
-      <span>The guide</span>
-    </div>
-    <a class="c5966c6" href="dashboard/">Trade <span class="c082651" aria-hidden="true">↗</span></a>
-  </div>
-</header>
-<section class="c06af32" aria-labelledby="guide-title">
-  <div class="c6397a5 cca02b8">
-    <nav class="c15edb2" aria-label="Breadcrumb"><nav class="c7a4ff9" aria-label="Breadcrumb"><a href="dashboard/">Home</a> <span>/</span> <span>NFT</span> <span>/</span> <span>NFT Marketplaces</span></nav></nav>
-    <div class="ce86c6a">
-      <div class="cd68bf5">
-        <div class="c520de3"><span class="cdcadc8">A closer look</span><span class="cbddafd"></span></div>
-        <h1 id="guide-title">NFT <em>Marketplaces</em>.</h1>
-        <p class="cb355d5">NFT Marketplaces are the storefronts of the token economy: places where a creator mints a piece once and a buyer claims it directly from a wallet, with no bank, auction house, or shipping involved. Under the hood each listing is just a smart contract recording an owner address, a price, and a set of transfer rules, and the <a href="https://ethereum.org/en/nft/" rel="nofollow noopener" target="_blank">NFT overview</a> from Ethereum's own documentation explains the standard most of them share. This guide walks through how the leading platforms differ, what fees and royalties actually cost you, which chains they run on, and what to check before you connect a wallet.</p>
-        <a class="c748cff" href="dashboard/">Trade <span class="c082651" aria-hidden="true">↗</span></a>
+  <a class="c3a58c4" href="#content">Skip to content</a>
+  <header class="c6a9232">
+    <nav class="cf198f1 c6397a5" aria-label="Primary navigation">
+      <a class="c9ed366" href="#top" aria-label="NFT desk, top of page">
+        <span class="cca4a0d" aria-hidden="true"><svg class="c98e943" viewBox="0 0 24 24"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg></span>
+        NFT desk
+      </a>
+      <div class="cd31cb3">
+        <a href="#facts">Key facts</a>
+        <a href="#sources">Sources</a>
+        <a class="c5104e1" href="dashboard/">Trade</a>
       </div>
-      <aside class="c061ee5" id="key-facts" aria-labelledby="aside-title">
-        <div class="ca58350">
-          <h2 id="aside-title">At a glance</h2>
-          <span class="cd2aadd">NFT</span>
+    </nav>
+  </header>
+  <div class="c6397a5" id="top">
+    <div class="c15edb2"><nav class="c7a4ff9" aria-label="Breadcrumb"><a href="dashboard/">Home</a> <span>/</span> <span>NFT</span> <span>/</span> <span>NFT Marketplaces</span></nav></div>
+    <section class="c06af32" aria-labelledby="hero-title">
+      <div class="cd68bf5">
+        <p class="c78c547">Floor &amp; mint</p>
+        <h1 id="hero-title">NFT <em>Marketplaces</em>.</h1>
+        <p class="c19abce">NFT Marketplaces are the storefronts of the token economy: places where a creator mints a piece once and a buyer claims it directly from a wallet, with no bank, auction house, or shipping involved.</p>
+        <a class="c5104e1" href="dashboard/">Trade <svg class="c98e943" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <aside class="ca02b6b c09c69b" aria-labelledby="widget-title">
+        <div class="c488dab">
+          <h2 id="widget-title">Buy NFTs</h2>
+          <span class="c7a2a4b">Live floor</span>
         </div>
-        <div class="c2e5805"><table class="c4052f3"><tbody><tr><th scope="row">Category</th><td>Platforms for minting, buying, and selling NFTs</td></tr>
+        <div class="c649698">
+          <div class="c8e33d9"><span class="c571af7">Collection</span></div>
+          <div class="c42ddde">
+            <select id="nft-collection" class="c758717 ccd0366" aria-label="Collection"></select>
+          </div>
+          <div class="c8f5421" id="nft-floor">Floor —</div>
+        </div>
+        <div class="c649698">
+          <div class="c8e33d9"><span class="c571af7">Quantity</span></div>
+          <div class="c42ddde">
+            <input id="nft-qty" class="c965722" type="number" inputmode="numeric" min="1" max="1000" step="1" value="1" aria-label="Quantity">
+            <span class="c4feb50"><img class="c6876f4" width="22" height="22" alt="ETH" src="assets/tokens/eth.svg"><span class="ce533d6">ETH</span></span>
+          </div>
+        </div>
+        <dl class="c740829">
+          <div><dt>Items</dt><dd id="nft-items">1</dd></div>
+          <div><dt>Subtotal</dt><dd id="nft-sub">—</dd></div>
+          <div><dt>Marketplace fee</dt><dd>2.5%</dd></div>
+          <div><dt>Total</dt><dd id="nft-total">—</dd></div>
+        </dl>
+        <noscript><p class="c56a7f7">Enable JavaScript to estimate the total.</p></noscript>
+        <a class="c5104e1" href="dashboard/">Buy <svg class="c98e943" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </aside>
+    </section>
+    <section class="c032a1d" id="facts" aria-labelledby="facts-title">
+      <h2 class="c067e31" id="facts-title">Key facts</h2>
+      <div class="c667b71"><table class="c4052f3"><tbody><tr><th scope="row">Category</th><td>Platforms for minting, buying, and selling NFTs</td></tr>
 <tr><th scope="row">Leading platforms</th><td>OpenSea, Blur, Magic Eden, Rarible</td></tr>
 <tr><th scope="row">Marketplace fee</th><td>Typically 0.5%–2.5% of the sale price</td></tr>
 <tr><th scope="row">Creator royalty</th><td>0–10%, enforcement varies by platform</td></tr>
 <tr><th scope="row">Supported chains</th><td>Ethereum, Solana, Polygon, Base, and other L2s</td></tr>
 <tr><th scope="row">Custody model</th><td>Non-custodial — you connect your own wallet</td></tr></tbody></table></div>
-        <a class="c748cff c43495c" href="dashboard/">Trade <span class="c082651" aria-hidden="true">↗</span></a>
-      </aside>
-    </div>
+    </section>
   </div>
-</section>
-<div class="c6397a5">
-  <div class="c0898f8">
-    <nav class="cc2a48f" aria-labelledby="toc-title">
-      <h2 class="c197c1b" id="toc-title">On this page</h2>
-      <ul class="c078627" id="toc-list">
-        <li><a class="cfd0977" href="#guide-sections" data-sections-link>In depth</a></li>
-        <li><a class="cfd0977" href="#questions">Questions &amp; answers</a></li>
-        <li><a class="cfd0977" href="#sources">Sources</a></li>
-      </ul>
-      <p class="ce15af5">Read from the beginning, or jump to the details you need.</p>
-    </nav>
-    <main class="c2fe1bb" id="guide-main" tabindex="-1">
-      <div class="cd3d51b" id="guide-sections"><section class="c24951a"><h2 class="c26ec5e">What Are NFT Marketplaces</h2><div class="c16b891"><strong>NFT Marketplaces are online platforms where a wallet-holder can mint, list, browse, bid on, and buy non-fungible tokens directly from other wallet-holders, with the marketplace acting only as the venue, not the custodian.</strong> No party ever takes possession of the token itself; a marketplace simply reads the blockchain to display what exists, hosts the listing interface, and routes the transaction that transfers ownership when a sale happens. The underlying asset — artwork, a game item, a membership pass, a domain — is defined once at mint and referenced the same way everywhere it is listed.<h3>How a listing and sale actually work</h3>Listing a token usually means signing an approval that lets the marketplace's smart contract move that specific item on your behalf once a buyer's offer matches your price; nothing moves until that moment. A fixed-price listing sells the instant someone pays the asking amount, while an auction accepts bids until it closes and settles to the highest one. Either way, the trade executes atomically — payment and ownership transfer happen in the same transaction, so a buyer cannot pay without receiving the token and a seller cannot keep both the token and the funds.<h3>Custody and wallet connection</h3>Every mainstream marketplace is non-custodial: you connect a wallet such as MetaMask or Phantom, and your private keys never leave it. The platform can show your holdings and request signatures, but it cannot move an asset without your explicit approval for that transaction. This is a meaningful difference from a traditional marketplace account, since there is no password reset and no customer-support override — losing your seed phrase means losing access permanently.</div></section>
+  <main class="c3f1ea0 c6397a5" id="content">
+    <section class="c24951a"><h2 class="c26ec5e">What Are NFT Marketplaces</h2><div class="c16b891"><strong>NFT Marketplaces are online platforms where a wallet-holder can mint, list, browse, bid on, and buy non-fungible tokens directly from other wallet-holders, with the marketplace acting only as the venue, not the custodian.</strong> No party ever takes possession of the token itself; a marketplace simply reads the blockchain to display what exists, hosts the listing interface, and routes the transaction that transfers ownership when a sale happens. The underlying asset — artwork, a game item, a membership pass, a domain — is defined once at mint and referenced the same way everywhere it is listed.<h3>How a listing and sale actually work</h3>Listing a token usually means signing an approval that lets the marketplace's smart contract move that specific item on your behalf once a buyer's offer matches your price; nothing moves until that moment. A fixed-price listing sells the instant someone pays the asking amount, while an auction accepts bids until it closes and settles to the highest one. Either way, the trade executes atomically — payment and ownership transfer happen in the same transaction, so a buyer cannot pay without receiving the token and a seller cannot keep both the token and the funds.<h3>Custody and wallet connection</h3>Every mainstream marketplace is non-custodial: you connect a wallet such as MetaMask or Phantom, and your private keys never leave it. The platform can show your holdings and request signatures, but it cannot move an asset without your explicit approval for that transaction. This is a meaningful difference from a traditional marketplace account, since there is no password reset and no customer-support override — losing your seed phrase means losing access permanently.</div></section>
 <section class="c24951a"><h2 class="c26ec5e">Major NFT Marketplaces to Know</h2><div class="c16b891">A handful of platforms account for most trading volume, and each one leans on a different chain or a different niche. Rankings shift often, and checking live volume on a tracker such as <a href="https://dappradar.com/nft/marketplaces" rel="nofollow noopener" target="_blank">DappRadar's marketplace rankings</a> is more reliable than any static list. The table below gives a quick orientation to the platforms a newcomer is most likely to encounter.<table><thead><tr><th>Marketplace</th><th>Primary chain(s)</th><th>Notable feature</th></tr></thead><tbody><tr><td>OpenSea</td><td>Ethereum, Polygon, Base, Solana</td><td>Largest catalog and widest multi-chain support</td></tr><tr><td>Blur</td><td>Ethereum</td><td>Pro trading tools and token-reward incentives</td></tr><tr><td>Magic Eden</td><td>Solana, Bitcoin, Ethereum</td><td>Started on Solana, later expanded multi-chain</td></tr><tr><td>Rarible</td><td>Ethereum, Polygon, Flow</td><td>Open protocol with creator-focused tooling</td></tr><tr><td>Foundation</td><td>Ethereum</td><td>Curated drops aimed at digital art</td></tr></tbody></table></div></section>
 <section class="c24951a"><h2 class="c26ec5e">NFT Marketplaces: Fees and Creator Royalties</h2><div class="c16b891">Two separate charges apply to most sales, and they are easy to confuse. The marketplace fee is a cut the platform keeps for hosting the trade; the creator royalty is a percentage the original artist or project set at mint, intended to pay them on every resale. Neither fee is fixed across the industry, and how strictly a royalty is honored has become one of the biggest differences between platforms.<h3>Marketplace fee</h3>Most platforms charge somewhere between 0.5% and 2.5% of the final sale price, taken automatically from the proceeds. OpenSea's published policy is a useful reference point for how a mainstream platform documents it, and reading a marketplace's own <a href="https://docs.opensea.io/" rel="nofollow noopener" target="_blank">fee and royalty documentation</a> before listing is worth the few minutes it takes.<h3>Creator royalty enforcement</h3>A royalty encoded in an older token standard is a request, not a guarantee — some marketplaces honor it fully, some make it optional for the buyer, and a few ignore it to keep their own fees competitive. Newer royalty standards attempt to enforce payment at the contract level rather than leaving it to marketplace policy, but adoption is uneven, so a collector who cares about supporting an artist should check a platform's current royalty stance rather than assume it matches the number set at mint.</div></section>
 <section class="c24951a"><h2 class="c26ec5e">Supported Blockchains Across NFT Marketplaces</h2><div class="c16b891">Where a token lives determines which wallet, which gas token, and often which marketplace you will use to trade it. Ethereum remains the reference chain for NFTs, but cost and speed pushed significant volume toward other networks.<h3>Ethereum and its layer-2s</h3>Ethereum mainnet hosts the deepest liquidity and the most established collections, verifiable at any time through a block explorer like <a href="https://etherscan.io/" rel="nofollow noopener" target="_blank">Etherscan</a>, where you can check a contract's mint history and holder count directly. Layer-2 networks such as Polygon and Base carry the same token standards at a fraction of the gas cost, which is why many marketplaces now list on both the mainnet and an L2 side by side.<h3>Solana and other chains</h3>Solana built its own NFT culture around near-instant settlement and fees measured in fractions of a cent, with Magic Eden as its flagship marketplace. Other chains, including Bitcoin-based token formats, have smaller but active secondary markets, and a growing number of marketplaces now support several chains from a single interface rather than forcing a separate account per network.</div></section>
 <section class="c24951a"><h2 class="c26ec5e">Aggregators That Scan NFT Marketplaces</h2><div class="c16b891">An aggregator is a tool that pulls live listings from several platforms at once and lets you buy the cheapest available copy of a token regardless of where it is listed, often in a single transaction. For a popular collection spread across multiple sites, checking an aggregator before buying directly on one platform can save real money, since the same item frequently sits at different prices in different places. Aggregators also make selling easier by relisting a token across multiple venues from one dashboard instead of repeating the process on each site manually, and a platform's own <a href="https://docs.magiceden.io/" rel="nofollow noopener" target="_blank">integration documentation</a> usually explains which listings it can reach.</div></section>
 <section class="c24951a"><h2 class="c26ec5e">How to Choose Among NFT Marketplaces</h2><div class="c16b891">The right platform depends on what chain your target collection lives on and what you value most — lowest fees, deepest liquidity, or the strongest royalty protection for creators. A few practical checks narrow the decision quickly.<ul><li>Confirm which chain the collection you want is actually minted on before picking a marketplace.</li><li>Compare total cost — marketplace fee plus royalty plus network gas — not just the headline fee percentage.</li><li>Check daily trading volume and active listings for that specific collection, not just the platform overall.</li><li>Look at whether the platform enforces or only suggests creator royalties, if that matters to you.</li><li>Read the withdrawal and listing-cancellation process before committing funds to a listing.</li></ul></div></section>
-<section class="c24951a"><h2 class="c26ec5e">Self-Custody and Safety on NFT Marketplaces</h2><div class="c16b891">Because every mainstream platform is non-custodial, safety comes down to what you approve in your wallet, not what the platform promises. The habits below carry across every chain and every marketplace.<h3>Wallet approvals and allowances</h3>A listing approval should authorize only the specific token being listed, not blanket access to your entire wallet. Periodically review and revoke old approvals you no longer need — a wallet with years of unused approvals is a larger attack surface than one that is kept clean, regardless of which marketplace granted them.<h3>Avoiding common scams</h3>Fake mint links, cloned marketplace pages, and unsolicited direct messages offering a free token are the most common ways a wallet gets drained, and the background on the <a href="https://en.wikipedia.org/wiki/Non-fungible_token" rel="nofollow noopener" target="_blank">Non-fungible token</a> entry is a useful primer on how the underlying standard is meant to work before trusting an unfamiliar link. No legitimate marketplace, creator, or support account will ever ask for your seed phrase — that single rule prevents the overwhelming majority of losses.</div></section></div>
-      <section class="cf0409b" id="questions" aria-labelledby="questions-title">
-        <h2 class="c26ec5e" id="questions-title">Questions &amp; answers</h2>
-        <details class="c78107a"><summary class="c39087f">What is an NFT marketplace?</summary><div class="cb1ce69">A platform where wallet-holders mint, list, and trade non-fungible tokens directly with each other. The marketplace hosts the listing and routes the transaction, but it never takes custody of the token or the funds.</div></details>
+<section class="c24951a"><h2 class="c26ec5e">Self-Custody and Safety on NFT Marketplaces</h2><div class="c16b891">Because every mainstream platform is non-custodial, safety comes down to what you approve in your wallet, not what the platform promises. The habits below carry across every chain and every marketplace.<h3>Wallet approvals and allowances</h3>A listing approval should authorize only the specific token being listed, not blanket access to your entire wallet. Periodically review and revoke old approvals you no longer need — a wallet with years of unused approvals is a larger attack surface than one that is kept clean, regardless of which marketplace granted them.<h3>Avoiding common scams</h3>Fake mint links, cloned marketplace pages, and unsolicited direct messages offering a free token are the most common ways a wallet gets drained, and the background on the <a href="https://en.wikipedia.org/wiki/Non-fungible_token" rel="nofollow noopener" target="_blank">Non-fungible token</a> entry is a useful primer on how the underlying standard is meant to work before trusting an unfamiliar link. No legitimate marketplace, creator, or support account will ever ask for your seed phrase — that single rule prevents the overwhelming majority of losses.</div></section>
+    <details class="c78107a"><summary class="c39087f">What is an NFT marketplace?</summary><div class="cb1ce69">A platform where wallet-holders mint, list, and trade non-fungible tokens directly with each other. The marketplace hosts the listing and routes the transaction, but it never takes custody of the token or the funds.</div></details>
 <details class="c78107a"><summary class="c39087f">Which NFT marketplace has the lowest fees?</summary><div class="cb1ce69">Fee structures change frequently and differ by platform and by chain, so compare the current marketplace fee plus any royalty and network gas at the time you trade rather than relying on a fixed ranking.</div></details>
 <details class="c78107a"><summary class="c39087f">Do all NFT marketplaces enforce creator royalties?</summary><div class="cb1ce69">No. Some honor the royalty set at mint fully, some make it optional for the buyer, and a few do not apply it at all. Check a platform's current royalty policy before assuming a creator will be paid.</div></details>
 <details class="c78107a"><summary class="c39087f">Can I use the same wallet across multiple NFT marketplaces?</summary><div class="cb1ce69">Yes. A single self-custody wallet works across virtually every marketplace on a given chain — you connect it, sign approvals, and your holdings and history stay with you rather than with any one platform.</div></details>
 <details class="c78107a"><summary class="c39087f">What is an NFT aggregator?</summary><div class="cb1ce69">A tool that pulls live listings from several marketplaces at once so you can buy the cheapest available copy of a token, or relist across multiple platforms from one dashboard instead of repeating the process manually on each site.</div></details>
 <details class="c78107a"><summary class="c39087f">Which blockchain has the most NFT trading activity?</summary><div class="cb1ce69">Ethereum holds the deepest historical liquidity and the most established collections, while Solana runs a large, fast, low-fee market of its own. Activity shifts over time, so checking a live tracker is more reliable than any fixed claim.</div></details>
 <details class="c78107a"><summary class="c39087f">How do I keep my wallet safe when using NFT marketplaces?</summary><div class="cb1ce69">Grant listing approvals only for the specific token involved, revoke old allowances periodically, verify you are on the real platform domain, and never share your seed phrase — no legitimate marketplace or support account will ever ask for it.</div></details>
-      </section>
-    </main>
-  </div>
-</div>
-<section class="cf09ff4" id="sources" aria-labelledby="sources-title">
-  <div class="c6397a5 ca613b7">
-    <div class="c797da0"><h2 id="sources-title">Sources</h2><p>References for further reading.</p></div>
-    <div class="c47ebef"><ul class="c3d2440"><li><a class="c51e717" href="https://ethereum.org/en/nft/" rel="nofollow noopener" target="_blank">Ethereum.org — NFT overview</a></li>
+  </main>
+  <section class="c055db6 c6397a5" id="sources" aria-labelledby="sources-title">
+    <h2 class="c067e31" id="sources-title">Sources</h2>
+    <ul class="c3d2440"><li><a class="c51e717" href="https://ethereum.org/en/nft/" rel="nofollow noopener" target="_blank">Ethereum.org — NFT overview</a></li>
 <li><a class="c51e717" href="https://en.wikipedia.org/wiki/Non-fungible_token" rel="nofollow noopener" target="_blank">Wikipedia — Non-fungible token</a></li>
 <li><a class="c51e717" href="https://dappradar.com/nft/marketplaces" rel="nofollow noopener" target="_blank">DappRadar — NFT marketplace rankings</a></li>
-<li><a class="c51e717" href="https://etherscan.io/" rel="nofollow noopener" target="_blank">Etherscan</a></li></ul></div>
-  </div>
-</section>
-<footer class="c12ec0d">
-  <div class="c6397a5 c3700ca">
-    <span class="c953e84">The guide</span>
-    <p class="c2ceb17">Last updated <span>Updated Oct 11, 2026</span></p>
-  </div>
-</footer>
-<script>
-(() => {
-  const toc = document.getElementById('toc-list');
-  const sections = Array.from(document.querySelectorAll('#guide-sections .c24951a'));
-  const fallback = toc.querySelector('[data-sections-link]');
-  const fragment = document.createDocumentFragment();
-  sections.forEach((section, index) => {
-    if (!section.id) {
-      const base = `guide-section-${index + 1}`;
-      let id = base;
-      let suffix = 1;
-      while (document.getElementById(id)) id = `${base}-${suffix++}`;
-      section.id = id;
-    }
-    const heading = section.querySelector('.c26ec5e, h2, h3');
-    const item = document.createElement('li');
-    const link = document.createElement('a');
-    link.className = 'toc-link';
-    link.href = `#${encodeURIComponent(section.id)}`;
-    link.textContent = heading?.textContent.trim() || section.getAttribute('aria-label') || `Section ${index + 1}`;
-    item.append(link);
-    fragment.append(item);
-  });
-  if (sections.length) fallback.parentElement.replaceWith(fragment);
-  const entries = Array.from(toc.querySelectorAll('a[href^="#"]')).map(link => {
-    const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
-    return { link, target };
-  }).filter(entry => entry.target);
-  if (!entries.length) return;
-  let activeLink;
-  let pending = false;
-  const activate = entry => {
-    if (!entry || entry.link === activeLink) return;
-    if (activeLink) activeLink.removeAttribute('aria-current');
-    entry.link.setAttribute('aria-current', 'location');
-    activeLink = entry.link;
-  };
-  const update = () => {
-    pending = false;
-    const boundary = Math.min(180, window.innerHeight * .25);
-    let active = entries[0];
-    for (const entry of entries) {
-      if (entry.target.getBoundingClientRect().top <= boundary) active = entry;
-    }
-    const root = document.scrollingElement || document.documentElement;
-    if (root.scrollHeight > window.innerHeight && Math.ceil(window.scrollY + window.innerHeight) >= root.scrollHeight - 2) {
-      active = entries[entries.length - 1];
-    }
-    activate(active);
-  };
-  const schedule = () => {
-    if (pending) return;
-    pending = true;
-    window.requestAnimationFrame(update);
-  };
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(schedule, {
-      rootMargin: '-12% 0px -60% 0px',
-      threshold: [0, .1, .5, 1]
-    });
-    entries.forEach(entry => observer.observe(entry.target));
-  }
-  toc.addEventListener('click', event => {
-    const link = event.target.closest('a');
-    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const entry = entries.find(item => item.link === link);
-    if (!entry) return;
-    event.preventDefault();
-    const hadTabindex = entry.target.hasAttribute('tabindex');
-    if (!hadTabindex) {
-      entry.target.setAttribute('tabindex', '-1');
-      entry.target.addEventListener('blur', () => entry.target.removeAttribute('tabindex'), { once: true });
-    }
-    entry.target.focus({ preventScroll: true });
-    entry.target.scrollIntoView({
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-      block: 'start'
-    });
-    if (window.location.hash !== link.hash) {
-      try { window.history.pushState(null, '', link.hash); } catch {}
-    }
-    activate(entry);
-  });
-  window.addEventListener('scroll', schedule, { passive: true });
-  window.addEventListener('resize', schedule, { passive: true });
-  window.addEventListener('hashchange', schedule);
-  window.addEventListener('load', schedule, { once: true });
-  update();
-})();
-</script>
+<li><a class="c51e717" href="https://etherscan.io/" rel="nofollow noopener" target="_blank">Etherscan</a></li></ul>
+  </section>
+  <footer class="c12ec0d">
+    <div class="c3700ca c6397a5">
+      <p>Updated Oct 11, 2026</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const COLLECTIONS = [
+        { n: 'Genesis Apes', f: 2.4 }, { n: 'Pixel Punks', f: 0.85 },
+        { n: 'Meta Land Parcels', f: 0.42 }, { n: 'Cyber Mechs', f: 0.33 },
+        { n: 'Ocean Relics', f: 0.12 }, { n: 'Chain Legends', f: 1.6 }
+      ];
+      const ETH = 2550, FEE = 0.025;
+      const $ = (id) => document.getElementById(id);
+      const sel = $('nft-collection'), qty = $('nft-qty'), floorEl = $('nft-floor');
+      const itemsEl = $('nft-items'), subEl = $('nft-sub'), totalEl = $('nft-total');
+      const num = (n) => new Intl.NumberFormat('en', { maximumFractionDigits: 4 }).format(n);
+      const usd = (v) => '~$' + new Intl.NumberFormat('en', { maximumFractionDigits: 0 }).format(v);
+      COLLECTIONS.forEach((c, i) => { const o = document.createElement('option'); o.value = i; o.textContent = c.n; sel.appendChild(o); });
+      const calc = () => {
+        const c = COLLECTIONS[+sel.value] || COLLECTIONS[0];
+        const q = Math.max(1, Math.floor(+qty.value || 0));
+        floorEl.textContent = 'Floor ' + num(c.f) + ' ETH (' + usd(c.f * ETH) + ')';
+        const sub = q * c.f, total = sub * (1 + FEE);
+        itemsEl.textContent = q;
+        subEl.textContent = num(sub) + ' ETH';
+        totalEl.textContent = num(total) + ' ETH (' + usd(total * ETH) + ')';
+      };
+      sel.addEventListener('change', calc);
+      qty.addEventListener('input', calc);
+      calc();
+    })();
+  </script>
 </body>
 </html>
